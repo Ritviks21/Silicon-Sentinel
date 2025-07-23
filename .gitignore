@@ -1,0 +1,31 @@
+# --- Python ---
+# Ignore Python's cache folder, compiled files, and virtual environments.
+__pycache__/
+*.pyc
+*.pyo
+.venv
+venv/
+
+# --- Datasets ---
+# Ignore all large, generated dataset folders.
+# These should not be stored on GitHub.
+final_wafer_dataset/
+final_data_for_training/
+robust_wafer_dataset/
+wafer-defect-detection-dataset/
+test_images_unzipped/
+
+# --- Training Results ---
+# Ignore the output folders from all YOLO training and prediction runs.
+wafer_final_runs/
+wafer_defect_runs/
+runs/
+
+# --- Archives & System Files ---
+# Ignore zipped files and common operating system files.
+*.zip
+.DS_Store
+
+# --- Google Colab ---
+# Ignore the default sample_data folder.
+sample_data/
