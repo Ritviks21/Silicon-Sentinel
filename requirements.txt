@@ -1,6 +1,6 @@
 streamlit
 ultralytics
+gdown
 opencv-python-headless
 requests
 Pillow
-gdown
