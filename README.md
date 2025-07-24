@@ -27,49 +27,50 @@
 
 ## 📖 Project Overview
 
-**Silicon Sentinel** is a state-of-the-art computer vision pipeline built to tackle one of the most critical challenges in the semiconductor industry: **automated defect detection**. By leveraging a fine-tuned **YOLOv8s** model on a robust, custom-generated synthetic dataset, this project provides a scalable and highly accurate solution for identifying microscopic flaws like scratches, particles, and blobs on silicon wafers, directly contributing to improved manufacturing yield and quality.
+**Silicon Sentinel** is a state-of-the-art computer vision pipeline built to tackle one of the most critical challenges in the semiconductor industry: **automated defect detection**. By leveraging a fine-tuned **YOLOv8s** model on a hyper-realistic, custom-generated synthetic dataset, this project provides a scalable and highly accurate solution for identifying microscopic flaws like scratches, particles, and blobs on silicon wafers.
 
 ---
 
 ## 🚀 Our Journey: The Story of a Smarter Model
 
-Every great project is a story of iteration. Our model wasn't built in a day; it was forged through a cycle of testing, failing, and improving. This journey showcases a real-world machine learning workflow.
+This project is a testament to the iterative nature of building real-world AI. Our model was not built in a single step but was forged through a cycle of testing, diagnosing failures, and engineering targeted solutions.
 
 <details>
-<summary><strong>V1: The Naive Model - Our First Attempt</strong></summary>
+<summary><strong>V1: The Naive Model - A Fragile Start</strong></summary>
 <br>
-We began by training a model on a simple dataset of basic scratches and particles. It worked perfectly on data it had seen before, but when shown a new defect type—a "blob"—it was completely blind.
+Our first model was trained on a simple, clean dataset. It learned to detect basic defects but failed when shown anything new, like a "blob" defect.
 <br><br>
-💡 **Lesson Learned:** A model is only as good as the variety of its training data. Without variety, it cannot generalize.
+💡 **Lesson Learned:** A model's ability to generalize depends entirely on the diversity of its training data.
 </details>
 
 <details>
-<summary><strong>V2: The Overeager Model - A New Problem</strong></summary>
+<summary><strong>V2: The Overeager Model - A New Flaw Emerges</strong></summary>
 <br>
-We rebuilt the dataset with more variety, including blobs. The model could now see all three defect types, but it became "trigger-happy," hallucinating defects on perfectly clean wafers.
+We rebuilt the dataset with more variety, including blobs. The model could now see all defect types, but it became "trigger-happy," hallucinating defects on perfectly clean wafers (false positives).
 <br><br>
-💡 **Lesson Learned:** A model must be taught what a defect *is not*. Training on "negative" (clean) examples is critical to prevent false alarms.
+💡 **Lesson Learned:** An AI must be taught what a defect *is not*. Training on "negative" (clean) examples is critical to prevent false alarms.
 </details>
 
 <details>
-<summary><strong>V3: The Ultimate Sentinel - The Final Iteration</strong></summary>
+<summary><strong>V3: The Ultimate Sentinel - The Final, Robust Model</strong></summary>
 <br>
-This was our final and most important iteration, where we addressed every lesson learned to build a truly robust AI.
+Our previous model was still not perfect. It confused the background with scratches, missed tiny particles, and couldn't distinguish blobs from particle clusters. This final iteration was a targeted strike against these specific failures.
 <ul>
-  <li><strong>Smarter Data:</strong> We generated our ultimate dataset with realistic textured backgrounds, curved/wavy scratches, and tiny isolated particles.</li>
-  <li><strong>A Bigger Brain:</strong> We upgraded from the lightweight `YOLOv8n` to the more powerful `YOLOv8s` to better learn subtle patterns.</li>
+  <li><strong>Hyper-Realistic Data:</strong> We engineered our final dataset with multiple, varied background textures (not just a grid), curved/wavy scratches, tiny "dust-speck" particles, and large, irregular "smudge" blobs to eliminate ambiguity.</li>
+  <li><strong>A Bigger Brain:</strong> We upgraded from the lightweight `YOLOv8n` to the more powerful `YOLOv8s` model to better learn subtle patterns in our complex data.</li>
+    <li><strong>More Patient Training:</strong> We increased the training time to 75 epochs, giving the more powerful model the time it needed to learn properly.</li>
 </ul>
 <br>
-✅ **The Result:** A reliable and intelligent model that correctly identifies a wide range of defects while correctly ignoring clean surfaces.
+✅ **The Result:** A reliable and intelligent model that correctly identifies a wide range of defects. The journey demonstrates a realistic workflow for tackling complex computer vision challenges.
 </details>
 
 ---
 
 ## ✨ Key Features
 
-- **High-Fidelity Synthetic Data**: A custom data engine creates thousands of realistic training examples, including clean wafers, curved scratches, and varied particles.
+- **Hyper-Realistic Synthetic Data**: A data engine that creates thousands of training examples with varied backgrounds and highly distinct defect types.
 - **Multi-Class Defect Recognition**: Accurately identifies and classifies 3 primary defect types: **scratch**, **particle**, and **blob**.
-- **State-of-the-Art Accuracy**: Employs a fine-tuned YOLOv8s model with heavy data augmentation to achieve exceptional performance.
+- **State-of-the-Art Accuracy**: Employs a fine-tuned YOLOv8s model with heavy data augmentation.
 - **End-to-End & Reproducible**: A complete pipeline from data creation to model training, documented for easy replication.
 
 ---
@@ -83,23 +84,18 @@ This was our final and most important iteration, where we addressed every lesson
 ---
 
 ## 📊 Results & Evaluation
-
 <a name="results"></a>
-Our final model demonstrates a powerful ability to distinguish between clean and defective wafers, correctly identifying various defects while maintaining a low false-positive rate.
+The final model demonstrates a powerful ability to identify various defects across challenging scenarios. While no model is perfect, the examples below showcase its capability to detect complex, overlapping patterns of scratches and particles.
 
 <p align="center">
-  <b>Final Model Performance Chart</b><br>
-  <i>(After training is complete, upload `results.png` from your results folder to `docs/images` and this will appear)</i><br>
-  <img src="docs/images/results.png" alt="Model Performance Chart" width="700">
+  <b>Prediction on "All Defects" Wafer</b><br>
+  <img src="docs/images/wafer_all_defects.jpg" alt="Prediction on All Defects Wafer" width="450">
 </p>
 
-### Prediction Examples
-
-| Original Image (`wafer_clean.jpg`) | Model Prediction (Confidence > 0.5) |
-| :---: | :---: |
-| <img src="docs/images/wafer-clean.png" width="300"> | **Result: No Defects Detected ✅** <br> <i>(Upload your screenshot as `clean_prediction.png` to `docs/images`)</i><br> <img src="docs/images/clean_prediction.png" width="300"> |
-| **Original Image (`wafer_all_defects.jpg`)** | **Model Prediction (Confidence > 0.5)** |
-| <img src="docs/images/wafer-all-defects.png" width="300"> | **Result: All Defects Correctly Identified ✅** <br> <i>(Upload your screenshot as `defects_prediction.png` to `docs/images`)</i><br> <img src="docs/images/defects_prediction.png" width="300"> |
+<p align="center">
+  <b>Prediction on "Particles" Wafer</b><br>
+  <img src="docs/images/wafer_particles.jpg" alt="Prediction on Particles Wafer" width="450">
+</p>
 
 ---
 
@@ -120,7 +116,12 @@ Our final model demonstrates a powerful ability to distinguish between clean and
     ```
 
 3.  **Train the Model**
-    Run the provided Google Colab notebook to generate the data, split it, and train the model.
+    Run the provided Google Colab notebook to generate the data, split it, and train the model. The key training command is:
+    ```python
+    from ultralytics import YOLO
+    model = YOLO('yolov8s.pt') # Using the 'small' model
+    results = model.train(data='path/to/data.yaml', epochs=75) # Training for 75 epochs
+    ```
 
 4.  **Evaluate the Model**
     ```python
