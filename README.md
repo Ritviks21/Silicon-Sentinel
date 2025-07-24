@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/images/banner.png" alt="Silicon Sentinel Project Banner">
+  <img src="https://github.com/Ritviks21/Silicon-Sentinel/raw/main/docs/images/banner.png" alt="Silicon Sentinel Project Banner">
 </p>
 
 <h1 align="center">Silicon Sentinel</h1>
@@ -79,7 +79,7 @@ Our previous model was still not perfect. It confused the background with scratc
 
 | Python | PyTorch | YOLOv8s | OpenCV | NumPy | Colab |
 | :---: | :---: | :---: | :---: | :---: | :---: |
-| <img src="docs/images/python.png" width="48"> | <img src="docs/images/pytorch.png" width="48"> | <img src="docs/images/yolov8.png" width="48"> | <img src="docs/images/opencv.png" width="48"> | <img src="docs/images/numpy.png" width="48"> | <img src="docs/images/colab.png" width="48"> |
+| <img src="https://github.com/Ritviks21/Silicon-Sentinel/raw/main/docs/images/python.png" width="48"> | <img src="https://github.com/Ritviks21/Silicon-Sentinel/raw/main/docs/images/pytorch.png" width="48"> | <img src="https://github.com/Ritviks21/Silicon-Sentinel/raw/main/docs/images/yolov8.png" width="48"> | <img src="https://github.com/Ritviks21/Silicon-Sentinel/raw/main/docs/images/opencv.png" width="48"> | <img src="https://github.com/Ritviks21/Silicon-Sentinel/raw/main/docs/images/numpy.png" width="48"> | <img src="https://github.com/Ritviks21/Silicon-Sentinel/raw/main/docs/images/colab.png" width="48"> |
 
 ---
 
@@ -89,12 +89,12 @@ The final model demonstrates a powerful ability to identify various defects acro
 
 <p align="center">
   <b>Prediction on "All Defects" Wafer</b><br>
-  <img src="docs/images/wafer_all_defects.jpg" alt="Prediction on All Defects Wafer" width="450">
+  <img src="https://github.com/Ritviks21/Silicon-Sentinel/raw/main/docs/images/wafer_all_defects.jpg" alt="Prediction on All Defects Wafer" width="450">
 </p>
 
 <p align="center">
   <b>Prediction on "Particles" Wafer</b><br>
-  <img src="docs/images/wafer_particles.jpg" alt="Prediction on Particles Wafer" width="450">
+  <img src="https://github.com/Ritviks21/Silicon-Sentinel/raw/main/docs/images/wafer_particles.jpg" alt="Prediction on Particles Wafer" width="450">
 </p>
 
 ---
