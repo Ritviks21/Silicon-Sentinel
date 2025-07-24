@@ -23,6 +23,12 @@
   <a href="#-getting-started">Getting Started</a>
 </p>
 
+## 🚀 Live Demo
+
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://silicon-sentinel-qr94pmvkxeykxenptcsyb2.streamlit.app/)
+
+**Click the badge above or follow this link to try the live application:** [https://silicon-sentinel-qr94pmvkxeykxenptcsyb2.streamlit.app/](https://silicon-sentinel-qr94pmvkxeykxenptcsyb2.streamlit.app/)
+
 ---
 
 ## 📖 Project Overview
