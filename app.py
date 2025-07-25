@@ -2,7 +2,6 @@ import streamlit as st
 from ultralytics import YOLO
 from PIL import Image
 import os
-import gdown
 import cv2
 import requests
 from io import BytesIO
@@ -17,18 +16,12 @@ st.write("An AI-powered system to detect microscopic defects on semiconductor wa
 # --- Model Loading ---
 @st.cache_resource
 def load_model():
-    """Downloads the model from Google Drive and loads it."""
-    model_path = "best.pt"
+    """Loads the model directly from the repository."""
+    # MODIFIED: Looking for the specific filename 'best (2).pt'
+    model_path = "best (2).pt"
+    
     if not os.path.exists(model_path):
-        try:
-            gdrive_url = "[PASTE_YOUR_GOOGLE_DRIVE_SHARING_LINK_FOR_MODEL_HERE]"
-            with st.spinner("Downloading final model... (this may take a minute on first startup)"):
-                gdown.download(url=gdrive_url, output=model_path, quiet=False)
-        except Exception as e:
-            st.error(f"Error downloading model: {e}")
-            return None
-    if not os.path.exists(model_path):
-        st.error("Model file failed to download. The application cannot start.")
+        st.error(f"Model file '{model_path}' not found. Please ensure it has been uploaded to the GitHub repository with this exact name.")
         return None
     model = YOLO(model_path)
     return model
@@ -72,13 +65,3 @@ if model is not None:
             st.success(f"Found {num_detections} potential defects.")
         else:
             st.success("No defects found with the current confidence threshold.")
-            
-    # --- Download Dataset Section ---
-    st.markdown("---")
-    st.subheader("Download Full Test Dataset")
-    st.write("To test with more images, you can download the complete, high-quality synthetic dataset used to train this model.")
-    
-    # Correct, final link to your GitHub Release
-    release_url = "https://github.com/Ritviks21/Silicon-Sentinel/releases/download/v1.0-data/ultimate_wafer_dataset.zip"
-    
-    st.markdown(f'<a href="{release_url}" target="_blank"><button style="color: white; background-color: #FF4B4B; border: none; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 12px;">Download Full Dataset (ZIP)</button></a>', unsafe_allow_html=True)
