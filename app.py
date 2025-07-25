@@ -16,11 +16,28 @@ st.write("An AI-powered system to detect microscopic defects on semiconductor wa
 # --- Model Loading ---
 @st.cache_resource
 def load_model():
-    """Loads the model directly from the repository."""
+    """Downloads the model from the GitHub Release and loads it."""
     model_path = "best.pt"
     if not os.path.exists(model_path):
-        st.error("Model file 'best.pt' not found. Please ensure it has been uploaded to the GitHub repository.")
+        try:
+            # This is the direct download link to your model from the GitHub Release.
+            release_url = "https://github.com/Ritviks21/Silicon-Sentinel/releases/download/v1.0-model/best.pt"
+            
+            with st.spinner("Downloading model from GitHub Release... (this may take a minute on first startup)"):
+                response = requests.get(release_url, stream=True)
+                response.raise_for_status() # Raise an exception for bad status codes
+                with open(model_path, "wb") as f:
+                    for chunk in response.iter_content(chunk_size=8192):
+                        f.write(chunk)
+        except Exception as e:
+            st.error(f"Error downloading model: {e}")
+            st.error("Please ensure the GitHub Release link is correct and public.")
+            return None
+            
+    if not os.path.exists(model_path):
+        st.error("Model file failed to download. The application cannot start.")
         return None
+        
     model = YOLO(model_path)
     return model
 
@@ -30,7 +47,6 @@ model = load_model()
 if model is not None:
     st.markdown("---")
     
-    # --- Sample Image Section ---
     st.subheader("Try a Sample Image")
     sample_image_url = "https://github.com/Ritviks21/Silicon-Sentinel/raw/main/sample_test_images/wafer_all_defects.png"
     if st.button("Test a Sample Image with Multiple Defects"):
@@ -40,13 +56,11 @@ if model is not None:
         except Exception as e:
             st.error(f"Could not load the sample image from GitHub. Error: {e}")
 
-    # --- File Uploader Section ---
     st.subheader("Or, Upload Your Own Image")
     uploaded_file_obj = st.file_uploader("Choose an image...", type=["png", "jpg", "jpeg"])
     if uploaded_file_obj:
         st.session_state.uploaded_file = Image.open(uploaded_file_obj)
 
-    # --- Prediction and Display ---
     if 'uploaded_file' in st.session_state and st.session_state.uploaded_file is not None:
         image = st.session_state.uploaded_file
         col1, col2 = st.columns(2)
