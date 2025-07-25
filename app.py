@@ -22,7 +22,7 @@ def load_model():
     
     if not os.path.exists(model_path):
         try:
-            # Using the nano model for efficient deployment
+            # IMPORTANT: This link should be for your final, trained nano model (best.pt)
             gdrive_url = "[PASTE_YOUR_GOOGLE_DRIVE_SHARING_LINK_FOR_NANO_MODEL_HERE]"
             
             with st.spinner("Downloading final model... (this may take a minute on first startup)"):
@@ -44,19 +44,33 @@ model = load_model()
 if model is not None:
     st.markdown("---")
     
-    # --- MODIFIED: Single Sample Image Section ---
+    # --- FIXED: Sample Images Section ---
     st.subheader("Try a Sample Image")
     
-    # URL to the single sample image in your GitHub repository
-    sample_image_url = "https://github.com/Ritviks21/Silicon-Sentinel/raw/main/sample_test_images/wafer_all_defects.png"
+    # These are the correct "raw" URLs to your images on GitHub
+    base_url = "https://github.com/Ritviks21/Silicon-Sentinel/raw/main/sample_test_images/"
+    sample_images = {
+        "Clean": base_url + "wafer_clean.png",
+        "Scratch": base_url + "wafer_scratch.png",
+        "Particles": base_url + "wafer_particles.png",
+        "Blob": base_url + "wafer_blob.png",
+        "All Defects": base_url + "wafer_all_defects.png"
+    }
 
-    if st.button("Test Sample Defect Image"):
-        try:
-            response = requests.get(sample_image_url)
-            image = Image.open(BytesIO(response.content))
-            st.session_state.uploaded_file = image # Use session state to hold the image
-        except Exception as e:
-            st.error(f"Could not load sample image. Please check the URL/filename in your repo. Error: {e}")
+    # Create buttons for each sample image
+    cols = st.columns(len(sample_images))
+    for i, (caption, url) in enumerate(sample_images.items()):
+        if cols[i].button(caption):
+            try:
+                response = requests.get(url)
+                # Check if the image was downloaded successfully
+                if response.status_code == 200:
+                    image = Image.open(BytesIO(response.content))
+                    st.session_state.uploaded_file = image # Use session state to hold the image
+                else:
+                    st.error(f"Failed to load sample image. Status code: {response.status_code}")
+            except Exception as e:
+                st.error(f"Could not load sample image. Error: {e}")
 
     # --- File Uploader Section ---
     st.subheader("Or, Upload Your Own Image")
