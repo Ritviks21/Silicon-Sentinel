@@ -11,17 +11,15 @@ st.set_page_config(page_title="Silicon Sentinel", page_icon="🛡️", layout="w
 
 # --- Title and Description ---
 st.title("🛡️ Silicon Sentinel: AI Wafer Defect Detection")
-st.write("An AI-powered system to detect microscopic defects on semiconductor wafers, trained on a hyper-realistic synthetic dataset.")
+st.write("An AI-powered system to detect microscopic defects on semiconductor wafers.")
 
 # --- Model Loading ---
 @st.cache_resource
 def load_model():
     """Loads the model directly from the repository."""
-    # MODIFIED: Looking for the specific filename 'best (2).pt'
-    model_path = "best (2).pt"
-    
+    model_path = "best.pt"
     if not os.path.exists(model_path):
-        st.error(f"Model file '{model_path}' not found. Please ensure it has been uploaded to the GitHub repository with this exact name.")
+        st.error("Model file 'best.pt' not found. Please ensure it has been uploaded to the GitHub repository.")
         return None
     model = YOLO(model_path)
     return model
