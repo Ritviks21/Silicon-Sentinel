@@ -25,9 +25,9 @@
 
 ## 🚀 Live Demo
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://silicon-sentinel-qr94pmvkxeykxenptcsyb2.streamlit.app/)
+[![Live Demo on Render](https://img.shields.io/badge/Live_Demo-Render-brightgreen?style=for-the-badge&logo=render)](https://silicon-sentinel.onrender.com/)
 
-**Click the badge above or follow this link to try the live application:** [https://silicon-sentinel-qr94pmvkxeykxenptcsyb2.streamlit.app/](https://silicon-sentinel-qr94pmvkxeykxenptcsyb2.streamlit.app/)
+**Click the badge above or follow this link to try the live application, now hosted on Render for enhanced performance:** [https://silicon-sentinel.onrender.com/](https://silicon-sentinel.onrender.com/)
 
 ---
 
