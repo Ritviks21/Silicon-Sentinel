@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/Ritviks21/Silicon-Sentinel/raw/main/docs/images/banner.png" alt="Silicon Sentinel Project Banner">
+  <img src="https://github.com/Ritviks21/Silicon-Sentinel/raw/main/docs/images/Silicon%20sentinel%20%20project%20banner.png" alt="Silicon Sentinel Project Banner">
 </p>
 
 <h1 align="center">Silicon Sentinel</h1>
@@ -85,7 +85,7 @@ Our previous model was still not perfect. It confused the background with scratc
 
 | Python | PyTorch | YOLOv8s | OpenCV | NumPy | Colab |
 | :---: | :---: | :---: | :---: | :---: | :---: |
-| <img src="https://github.com/Ritviks21/Silicon-Sentinel/raw/main/docs/images/python.png" width="48"> | <img src="https://github.com/Ritviks21/Silicon-Sentinel/raw/main/docs/images/pytorch.png" width="48"> | <img src="https://github.com/Ritviks21/Silicon-Sentinel/raw/main/docs/images/yolov8.png" width="48"> | <img src="https://github.com/Ritviks21/Silicon-Sentinel/raw/main/docs/images/opencv.png" width="48"> | <img src="https://github.com/Ritviks21/Silicon-Sentinel/raw/main/docs/images/numpy.png" width="48"> | <img src="https://github.com/Ritviks21/Silicon-Sentinel/raw/main/docs/images/colab.png" width="48"> |
+| <img src="https://github.com/Ritviks21/Silicon-Sentinel/raw/main/docs/images/Python.png" width="48"> | <img src="https://raw.githubusercontent.com/Ritviks21/Silicon-Sentinel/main/docs/images/Pytorch.png" width="48"> | <img src="https://github.com/Ritviks21/Silicon-Sentinel/raw/main/docs/images/Yolov8s.png" width="48"> | <img src="https://github.com/Ritviks21/Silicon-Sentinel/raw/main/docs/images/OpenCV.png" width="48"> | <img src="https://github.com/Ritviks21/Silicon-Sentinel/raw/main/docs/images/Numpy.png" width="48"> | <img src="https://github.com/Ritviks21/Silicon-Sentinel/raw/main/docs/images/Colab.png" width="48"> |
 
 ---
 
