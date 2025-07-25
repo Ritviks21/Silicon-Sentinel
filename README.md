@@ -28,7 +28,9 @@
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://silicon-sentinel-qr94pmvkxeykxenptcsyb2.streamlit.app/)
 
-**Click the badge above to try the primary live application, hosted on Streamlit Community Cloud.** This version uses our lightweight `yolov8n` model, which is optimized for fast and efficient performance on free hardware.
+**Click the badge above or follow this link to try the live application:** [https://silicon-sentinel-qr94pmvkxeykxenptcsyb2.streamlit.app/](https://silicon-sentinel-qr94pmvkxeykxenptcsyb2.streamlit.app/)
+
+This version, hosted on Streamlit Community Cloud, uses our lightweight `yolov8n` model, which is optimized for fast and efficient performance on free hardware.
 
 <br>
 
