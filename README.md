@@ -32,8 +32,8 @@
 
 <br>
 
-> ### ⚡️ High-Performance Demo on Render
-> A second, more powerful version of this app using our larger `yolov8s` model is deployed on Render. You can explore the code for it on the **`render-deployment`** branch and try the live app here: **[https://silicon-sentinel.onrender.com/](https://silicon-sentinel.onrender.com/)**
+> ### ⚡️ High-Performance Version
+> A second, more powerful version of this app using our larger `yolov8s` model is also available. You can explore the code and deployment instructions for it on the **`render-deployment`** branch of this repository.
 
 ---
 
