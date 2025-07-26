@@ -136,6 +136,26 @@ The final model demonstrates a powerful ability to identify various defects acro
 
 ---
 
+## 🤝 How to Contribute
+
+Contributions are welcome! This project is a continuous effort, and there are many ways to help it grow. If you'd like to contribute, please feel free to fork the repository and submit a pull request.
+
+### Areas for Contribution
+
+* **Improve the Dataset**:
+    * Add new, challenging defect types (e.g., "stains," "corrosion," "edge-ring").
+    * Enhance the realism of the existing defect generation functions.
+
+* **Experiment with Models**:
+    * Train larger, more powerful models (e.g., `YOLOv8-L`, `YOLOv8-X`).
+    * Experiment with different hyperparameters to improve accuracy.
+
+* **Enhance the Application**:
+    * Add new features to the live demo, such as a results summary or the ability to adjust the confidence threshold in the UI.
+    * Improve the user interface and user experience.
+
+---
+
 ## 🔗 Connect with Me
 
 <p align="left">
