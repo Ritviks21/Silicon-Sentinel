@@ -1,17 +1,17 @@
 <p align="center">
-  <img src="[URL_TO_YOUR_PROJECT_BANNER.PNG]" alt="Project Banner">
+  <img src="https://github.com/Ritviks21/Silicon-Sentinel/raw/main/docs/images/Silicon%20sentinel%20%20project%20banner.png" alt="Silicon Sentinel Project Banner">
 </p>
 
-<h1 align="center">[YOUR_CHOSEN_PROJECT_NAME]</h1>
+<h1 align="center">Silicon Sentinel</h1>
 <p align="center">
-  <i>An AGI-Powered Strategic Forecaster for Complex Agricultural Crises</i>
+  <i>An AI-Powered System for Flawless Semiconductor Quality Control</i>
 </p>
 
 <p align="center">
     <img src="https://img.shields.io/badge/Python-3.11-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python Version">
-    <img src="https://img.shields.io/badge/Streamlit-%23FF4B4B.svg?style=for-the-badge&logo=Streamlit&logoColor=white" alt="Streamlit">
-    <img src="https://img.shields.io/badge/Qiskit-%236929C4.svg?style=for-the-badge&logo=IBM&logoColor=white" alt="Qiskit">
-    <img src="https://img.shields.io/badge/Google%20Gemini-8E77F0?style=for-the-badge&logo=google&logoColor=white" alt="Gemini">
+    <img src="https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white" alt="PyTorch">
+    <img src="https://img.shields.io/badge/YOLOv8-00FFFF.svg?style=for-the-badge&logo=YOLO&logoColor=black" alt="YOLOv8">
+    <img src="https://img.shields.io/badge/OpenCV-5C3EE8.svg?style=for-the-badge&logo=OpenCV&logoColor=white" alt="OpenCV">
 </p>
 
 <p align="center">
@@ -19,74 +19,97 @@
   <a href="#-our-journey">Our Journey</a> •
   <a href="#-key-features">Key Features</a> •
   <a href="#-tech-stack">Tech Stack</a> •
-  <a href="#-how-to-contribute">Contribute</a>
+  <a href="#-results">Results</a>
 </p>
 
 ---
 
 ## 🚀 Live Demo
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://ritviks21-maharashtra-oracle-app-forivi.streamlit.app/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://silicon-sentinel-qr94pmvkxeykxenptcsyb2.streamlit.app/)
 
-**Click the badge above or follow this link to interact with the live application:** [https://ritviks21-maharashtra-oracle-app-forivi.streamlit.app/](https://ritviks21-maharashtra-oracle-app-forivi.streamlit.app/)
+**Click the badge above or follow this link to try the live application:** [https://silicon-sentinel-qr94pmvkxeykxenptcsyb2.streamlit.app/](https://silicon-sentinel-qr94pmvkxeykxenptcsyb2.streamlit.app/)
 
-<p align="center">
-  <b>The App in Action</b><br>
-  <img src="[URL_TO_YOUR_APP_IN_ACTION.GIF]" alt="Demo GIF" width="700">
-</p>
+This version, hosted on Streamlit Community Cloud, uses our lightweight `yolov8n` model, which is optimized for fast and efficient performance on free hardware.
+
+<br>
+
+> ### ⚡️ High-Performance Version
+> A second, more powerful version of this app using our larger `yolov8s` model is also available. You can explore the code and deployment instructions for it on the **`render-deployment`** branch of this repository.
 
 ---
 
 ## 📖 Project Overview
 
-**[YOUR_CHOSEN_PROJECT_NAME]** is a state-of-the-art strategic forecasting tool built to simulate the complex, cascading effects of overlapping crises on a regional agricultural system. By fusing an interactive classical model, a quantum simulation engine, and a powerful generative AI, this project moves beyond simple prediction to provide actionable, strategic advice for policymakers.
+**Silicon Sentinel** is a state-of-the-art computer vision pipeline built to tackle one of the most critical challenges in the semiconductor industry: **automated defect detection**. By leveraging a fine-tuned **YOLOv8** model on a hyper-realistic, custom-generated synthetic dataset, this project provides a scalable and highly accurate solution for identifying microscopic flaws like scratches, particles, and blobs on silicon wafers.
 
 ---
 
-## 🚀 Our Journey: The Story of the Project
+## 🚀 Our Journey: The Story of a Smarter Model
 
-This project evolved through three distinct phases, each teaching a valuable lesson about building intelligent systems.
+This project is a testament to the iterative nature of building real-world AI. Our model was not built in a single step but was forged through a cycle of testing, diagnosing failures, and engineering targeted solutions.
 
 <details>
-<summary><strong>V1: The Simple Calculator - A Deterministic Start</strong></summary>
+<summary><strong>V1: The Naive Model - A Fragile Start</strong></summary>
 <br>
-Our first version was a classical model that could only handle single, isolated events. It was a simple `if-this-then-that` calculator.
+Our first model was trained on a simple, clean dataset. It learned to detect basic defects but failed when shown anything new, like a "blob" defect.
 <br><br>
-💡 **Lesson Learned:** Real-world crises are complex, overlapping, and unpredictable. A simple calculator cannot capture the "ripple effect."
+💡 **Lesson Learned:** A model's ability to generalize depends entirely on the diversity of its training data.
 </details>
 
 <details>
-<summary><strong>V2: The Quantum Leap - Seeing the Ripple Effect</strong></summary>
+<summary><strong>V2: The Overeager Model - A New Flaw Emerges</strong></summary>
 <br>
-We rebuilt the core using **Qiskit** to create a "Quantum Battlefield." By entangling variables like Monsoon, Yield, and Demand, we could finally simulate the cascading impact of multiple, simultaneous events. The model became powerful, but its output was raw probability data—difficult for a human to interpret.
+We rebuilt the dataset with more variety, including blobs. The model could now see all defect types, but it became "trigger-happy," hallucinating defects on perfectly clean wafers (false positives).
 <br><br>
-💡 **Lesson Learned:** Powerful simulation is useless without powerful interpretation. Data needs a storyteller to become wisdom.
+💡 **Lesson Learned:** An AI must be taught what a defect *is not*. Training on "negative" (clean) examples is critical to prevent false alarms.
 </details>
 
 <details>
-<summary><strong>V3: The AGI Strategist - The Final, Intelligent Core</strong></summary>
+<summary><strong>V3: The Ultimate Sentinel - The Final, Robust Model</strong></summary>
 <br>
-This final version integrated **Google's Gemini** not as a simple reporter, but as an autonomous strategic advisor. The AI's task is to receive the complex probabilistic data from the quantum simulation and translate it into a high-level strategic briefing, complete with risk analysis and policy recommendations.
-<br><br>
-✅ **The Result:** A true strategic tool that doesn't just predict the future but helps you shape it, demonstrating a complete pipeline from user-defined scenario to actionable, AI-generated strategy.
+Our previous model was still not perfect. It confused the background with scratches, missed tiny particles, and couldn't distinguish blobs from particle clusters. This final iteration was a targeted strike against these specific failures.
+<ul>
+  <li><strong>Hyper-Realistic Data:</strong> We engineered our final dataset with multiple, varied background textures, curved/wavy scratches, tiny "dust-speck" particles, and large, irregular "smudge" blobs to eliminate ambiguity.</li>
+  <li><strong>A Bigger Brain:</strong> We upgraded from the lightweight `YOLOv8n` to the more powerful `YOLOv8s` model to better learn subtle patterns in our complex data.</li>
+    <li><strong>More Patient Training:</strong> We increased the training time to 75 epochs, giving the more powerful model the time it needed to learn properly.</li>
+</ul>
+<br>
+✅ **The Result:** A reliable and intelligent model that correctly identifies a wide range of defects. The journey demonstrates a realistic workflow for tackling complex computer vision challenges.
 </details>
 
 ---
 
 ## ✨ Key Features
 
-- **Interactive Scenario Builder**: Set initial conditions using historical data presets or manually define a custom baseline with interactive widgets.
-- **Complex Crisis Simulation**: A multi-select interface allows for combining multiple, overlapping events into a single simulation.
-- **Quantum "Ripple Effect" Engine**: Uses a Qiskit-based quantum circuit to model the non-linear, second-order effects of crises.
-- **AI-Powered Strategic Briefings**: The final output is a full strategic report containing an executive summary, risk analysis, and actionable policy recommendations.
+- **Hyper-Realistic Synthetic Data**: A data engine that creates thousands of training examples with varied backgrounds and highly distinct defect types.
+- **Multi-Class Defect Recognition**: Accurately identifies and classifies 3 primary defect types: `scratch`, `particle`, and `blob`.
+- **State-of-the-Art Accuracy**: Employs fine-tuned YOLOv8 models with heavy data augmentation.
+- **End-to-End & Reproducible**: A complete pipeline from data creation to model training, documented for easy replication.
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Streamlit | Qiskit | Gemini | Python | Pandas |
-| :---: | :---: | :---: | :---: | :---: |
-| <img src="https://raw.githubusercontent.com/Ritviks21/Silicon-Sentinel/main/docs/images/Streamlit.png" width="48"> | <img src="https://raw.githubusercontent.com/Ritviks21/Silicon-Sentinel/main/docs/images/qiskit-logo.png" width="48"> | <img src="https://raw.githubusercontent.com/Ritviks21/Silicon-Sentinel/main/docs/images/Google-Gemini-AI-Logo.png" width="48"> | <img src="https://github.com/Ritviks21/Silicon-Sentinel/main/docs/images/Python.png" width="48"> | <img src="https://raw.githubusercontent.com/Ritviks21/Silicon-Sentinel/main/docs/images/pandas-logo.png" width="48"> |
+| Python | PyTorch | YOLOv8 | OpenCV | NumPy | Colab |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| <img src="https://github.com/Ritviks21/Silicon-Sentinel/raw/main/docs/images/Python.png" width="48"> | <img src="https://raw.githubusercontent.com/Ritviks21/Silicon-Sentinel/main/docs/images/Pytorch.png" width="48"> | <img src="https://github.com/Ritviks21/Silicon-Sentinel/raw/main/docs/images/Yolov8s.png" width="48"> | <img src="https://github.com/Ritviks21/Silicon-Sentinel/raw/main/docs/images/OpenCV.png" width="48"> | <img src="https://github.com/Ritviks21/Silicon-Sentinel/raw/main/docs/images/Numpy.png" width="48"> | <img src="https://github.com/Ritviks21/Silicon-Sentinel/raw/main/docs/images/Colab.png" width="48"> |
+
+---
+
+## 📊 Results & Evaluation
+<a name="results"></a>
+The final model demonstrates a powerful ability to identify various defects across challenging scenarios. The examples below showcase its capability to detect complex, overlapping patterns of scratches and particles.
+
+<p align="center">
+  <b>Prediction on "All Defects" Wafer</b><br>
+  <img src="https://github.com/Ritviks21/Silicon-Sentinel/raw/main/docs/images/wafer_all_defects.jpg" alt="Prediction on All Defects Wafer" width="450">
+</p>
+
+<p align="center">
+  <b>Prediction on "Particles" Wafer</b><br>
+  <img src="https://github.com/Ritviks21/Silicon-Sentinel/raw/main/docs/images/wafer_particles.jpg" alt="Prediction on Particles Wafer" width="450">
+</p>
 
 ---
 
@@ -97,8 +120,8 @@ This final version integrated **Google's Gemini** not as a simple reporter, but 
 
 1.  **Clone the Repository**
     ```bash
-    git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
-    cd your-repo-name
+    git clone [https://github.com/Ritviks21/Silicon-Sentinel.git](https://github.com/Ritviks21/Silicon-Sentinel.git)
+    cd Silicon-Sentinel
     ```
 
 2.  **Install Dependencies**
@@ -106,35 +129,37 @@ This final version integrated **Google's Gemini** not as a simple reporter, but 
     pip install -r requirements.txt
     ```
 
-3.  **Set Up API Key**
-    Create a `.streamlit/secrets.toml` file and add your Google Gemini API key:
-    ```toml
-    GEMINI_API_KEY = "YOUR_API_KEY_HERE"
-    ```
+3.  **Train the Model**
+    Run the provided Google Colab notebook to generate the data, split it, and train the model.
 
-4.  **Run the App**
-    ```bash
-    streamlit run app.py
-    ```
 </details>
 
 ---
 
 ## 🤝 How to Contribute
 
-Contributions are always welcome! This project demonstrates a unique proof-of-concept, and there are many ways to expand on it.
+Contributions are welcome! This project is a continuous effort, and there are many ways to help it grow. If you'd like to contribute, please feel free to fork the repository and submit a pull request.
 
 ### Areas for Contribution
-* **Expand the Quantum Model**: Add more qubits to represent new variables (e.g., `Transportation`, `Global Prices`) and design their entangled relationships.
-* **Integrate Real-Time Data**: Connect the app to a live weather API to set the initial monsoon state based on real-time data.
-* **Enhance the AI's "Tools"**: Give the AI more "tools" to call, such as a function to look up historical data or current market prices, to enrich its strategic analysis.
+
+* **Improve the Dataset**:
+    * Add new, challenging defect types (e.g., "stains," "corrosion," "edge-ring").
+    * Enhance the realism of the existing defect generation functions.
+
+* **Experiment with Models**:
+    * Train larger, more powerful models (e.g., `YOLOv8-L`, `YOLOv8-X`).
+    * Experiment with different hyperparameters to improve accuracy.
+
+* **Enhance the Application**:
+    * Add new features to the live demo, such as a results summary or the ability to adjust the confidence threshold in the UI.
+    * Improve the user interface and user experience.
 
 ---
 
 ## 🔗 Connect with Me
 
 <p align="left">
-<a href="https://github.com/Ritviks21" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/github.svg" alt="Ritviks21" height="30" width="40" /></a>
-<a href="https://x.com/gemdata21" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="gemdata21" height="30" width="40" /></a>
-<a href="https://huggingface.co/srits21" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/hugging-face.svg" alt="srits21" height="30" width="40" /></a>
+<a href="https://github.com/Ritviks21" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/github.svg" alt="Your Github" height="30" width="40" /></a>
+<a href="https://x.com/gemdata21" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="Your Twitter" height="30" width="40" /></a>
+<a href="https://huggingface.co/srits21" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/hugging-face.svg" alt="Your Hugging Face" height="30" width="40" /></a>
 </p>
